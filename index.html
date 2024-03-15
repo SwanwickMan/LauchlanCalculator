@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smolov Jr Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form action="" id="input-form">
+        <input type="number" name="1RM" id="1RM">Kg<br>
+        <select id="increment" name="increment">
+            <option value="2.5">2.5Kg</option>
+            <option value="5">5Kg</option>
+        </select><br>
+        <button type="button" onclick="calculate()">Submit</button><br>
+    </form>
+
+    <br>
+    <table id="week1">
+        <tr>
+            <th>Day</th>
+            <th>Sets</th>
+            <th>Reps</th>
+            <th>Weight</th>
+        </tr>
+        <tr>
+            <td>Monday</td>
+            <td>6</td>
+            <td>6</td>
+            <td id="0,0"></td>
+        </tr>
+        <tr>
+            <td>Wednesday</td>
+            <td>7</td>
+            <td>5</td>
+            <td id="0,1"></td>
+        </tr>
+        <tr>
+            <td>Friday</td>
+            <td>8</td>
+            <td>4</td>
+            <td id="0,2"></td>
+        </tr>
+        <tr>
+            <td>Saturday</td>
+            <td>10</td>
+            <td>3</td>
+            <td id="0,3"></td>
+        </tr>
+    </table>
+
+    <br>
+    <table id="week2">
+        <tr>
+            <th>Day</th>
+            <th>Sets</th>
+            <th>Reps</th>
+            <th>Weight</th>
+        </tr>
+        <tr>
+            <td>Monday</td>
+            <td>6</td>
+            <td>6</td>
+            <td id="1,0"></td>
+        </tr>
+        <tr>
+            <td>Wednesday</td>
+            <td>7</td>
+            <td>5</td>
+            <td id="1,1"></td>
+        </tr>
+        <tr>
+            <td>Friday</td>
+            <td>8</td>
+            <td>4</td>
+            <td id="1,2"></td>
+        </tr>
+        <tr>
+            <td>Saturday</td>
+            <td>10</td>
+            <td>3</td>
+            <td id="1,3"></td>
+        </tr>
+    </table>
+
+    <br>
+    <table id="week3">
+        <tr>
+            <th>Day</th>
+            <th>Sets</th>
+            <th>Reps</th>
+            <th>Weight</th>
+        </tr>
+        <tr>
+            <td>Monday</td>
+            <td>6</td>
+            <td>6</td>
+            <td id="2,0"></td>
+        </tr>
+        <tr>
+            <td>Wednesday</td>
+            <td>7</td>
+            <td>5</td>
+            <td id="2,1"></td>
+        </tr>
+        <tr>
+            <td>Friday</td>
+            <td>8</td>
+            <td>4</td>
+            <td id="2,2"></td>
+        </tr>
+        <tr>
+            <td>Saturday</td>
+            <td>10</td>
+            <td>3</td>
+            <td id="2,3"></td>
+        </tr>
+    </table>
+
+</body>
+<script>
+    function calculate() {
+        let oneRepMax = Number(document.getElementById("1RM").value) || 0;
+        let increment = Number(document.getElementById("increment").value) || 0;
+
+        for (let week = 0; week < 3; week++) {
+            for (let day = 0; day < 4; day++) {
+                element = document.getElementById(week + "," + day);
+
+                element.innerHTML = getWeight(week, day, increment, oneRepMax) + "Kg";
+            }
+            
+        }
+    }
+
+    function getWeight(week, day, increment, oneRepMax) {
+        return nearest(((0.7 + 0.05*day) * oneRepMax)) + week*increment;
+    }
+
+    function nearest(number) {
+        return Math.round(number / 2.5) * 2.5;
+    }
+</script>
+</html>

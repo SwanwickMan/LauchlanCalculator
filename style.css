@@ -1,0 +1,39 @@
+body {
+    background-color: rgb(33, 33, 33);
+    color: white;
+}
+
+form {
+    width: 50%;
+    margin: auto;
+    border:1px solid black;
+}
+
+input, select, button {
+    margin-left: 45%;
+    width: 10%;
+    margin-bottom: 2%;
+} 
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+button {
+    margin-bottom: 0%;
+}
+
+table {
+    width: 50%;
+    margin: auto;
+}
+
+table, th, td {
+    border:1px solid black;
+}

@@ -8,10 +8,10 @@
 </head>
 <body>
 
-    <form action="" id="input-form">
+    <div id="input-form">
         <input type="number" name="1RM" id="1RM">Kg<br>
         <button type="button" onclick="writeRows()">Submit</button><br>
-    </form>
+    </div>
 
     <br>
     <table id="Program">
@@ -75,7 +75,7 @@
 </body>
 <script>
     function writeRows() {
-        let baseWeight = Number(document.getElementById("1RM").value) || 0;
+        let baseWeight = Number(document.getElementById("1RM").value) * 0.60 || 0;
         for (let week = 0; week < 10; week++) {
             let element = document.getElementById((week+1).toString());
             element.innerHTML = getWeekWeight(baseWeight,week) + "Kg";

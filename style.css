@@ -3,10 +3,11 @@ body {
     color: white;
 }
 
-form {
+#input-form {
     width: 50%;
     margin: auto;
-    border:1px solid blue;
+    border:1px solid black;
+    padding: 5px;
 }
 
 input, select, button {
@@ -14,13 +15,6 @@ input, select, button {
     margin-right: 10px;
     margin-left: 45%;
     width: 10%;
-    margin-bottom: 2%;
-} 
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
 }
 
 input[type=number] {

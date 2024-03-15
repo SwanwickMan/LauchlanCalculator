@@ -10,6 +10,8 @@ form {
 }
 
 input, select, button {
+    min-width: 60px;
+    margin-right: 10px;
     margin-left: 45%;
     width: 10%;
     margin-bottom: 2%;
@@ -36,4 +38,17 @@ table {
 
 table, th, td {
     border:1px solid black;
+}
+
+/* mobile formatting */
+@media screen and (max-width: 800px) {
+    input, select, button {
+    width: 40%;
+    margin-bottom: 2%;
+  }
+    form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }

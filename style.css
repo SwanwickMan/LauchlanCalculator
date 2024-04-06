@@ -37,12 +37,9 @@ table, th, td {
 /* mobile formatting */
 @media screen and (max-width: 800px) {
     input, select, button {
-    width: 40%;
-    margin-bottom: 2%;
-  }
-    form{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    min-width: 60px;
+    margin-right: 10px;
+    margin-left: 10%;
+    width: 10%;
     }
 }

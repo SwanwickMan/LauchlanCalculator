@@ -38,7 +38,7 @@ table, th, td {
 @media screen and (max-width: 800px) {
     input, select, button {
     min-width: 60px;
-    margin-right: 10px;
+    margin-right: 10%;
     margin-left: 10%;
     width: 10%;
     }

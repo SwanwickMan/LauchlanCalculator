@@ -12,9 +12,12 @@ body {
 
 input, select, button {
     min-width: 60px;
-    margin-right: 10px;
-    margin-left: 45%;
     width: 10%;
+}
+
+#ORM-panel, button {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 input[type=number] {
@@ -36,10 +39,9 @@ table, th, td {
 
 /* mobile formatting */
 @media screen and (max-width: 800px) {
-    input, select, button {
+    
+input, select, button {
     min-width: 60px;
-    margin-right: 10%;
-    margin-left: 10%;
-    width: 10%;
-    }
+    width: 30%;
+}
 }

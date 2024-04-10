@@ -8,6 +8,7 @@ body {
     margin: auto;
     border:1px solid black;
     padding: 5px;
+    text-align: center;
 }
 
 input, select, button {
@@ -15,17 +16,20 @@ input, select, button {
     width: 10%;
 }
 
-#ORM-panel, button {
+#ORM-panel {
+    min-width: 100px;
+    width: 10%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#input-form button {
     margin-left: auto;
     margin-right: auto;
 }
 
 input[type=number] {
   -moz-appearance: textfield;
-}
-
-button {
-    margin-bottom: 0%;
 }
 
 table {
@@ -39,9 +43,8 @@ table, th, td {
 
 /* mobile formatting */
 @media screen and (max-width: 800px) {
-    
+
 input, select, button {
-    min-width: 60px;
     width: 30%;
 }
 }
